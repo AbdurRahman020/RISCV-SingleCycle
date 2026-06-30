@@ -1,0 +1,10 @@
+# Draw.io backup files
+.$*.drawio.bkp
+*.drawio.bkp
+
+# Questa/ModelSim simulation directory
+questa/
+work/
+transcript
+vsim.wlf
+*.wlf
