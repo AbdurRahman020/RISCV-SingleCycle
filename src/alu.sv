@@ -1,11 +1,11 @@
 module alu (
-    input logic [31: 0] SrcA,
-    input logic [31: 0] SrcB,
+    input logic [31:0] SrcA,
+    input logic [31:0] SrcB,
     input logic [2:0] AluControl,
 
     output logic Zero,
-    output logic [31:0] ALUResult, 
-)
+    output logic [31:0] ALUResult
+);
 
     always_comb begin
         case (AluControl)
@@ -17,7 +17,7 @@ module alu (
             default: ALUResult = 32'b0; // default case
         endcase
 
-        Zero = (ALUResult == 32'b0) ? 1'b1 : 1'b0;
+        Zero = (ALUResult == 32'b0);
     end
 
 endmodule

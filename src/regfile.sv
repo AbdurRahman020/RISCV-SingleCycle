@@ -1,4 +1,5 @@
 module regfile(
+    input  logic              CLK,
     input  logic  [4:0]       A1, A2, A3,
     input  logic  [31:0]      WD3,
     input  logic              WE3,
@@ -7,7 +8,7 @@ module regfile(
 
     logic [31:0] x [31:0]; //32-bit 32 registers
 
-    always_ff @(posedge clk) begin //synchronus write
+    always_ff @(posedge CLK) begin //synchronus write
         if (WE3) x[A3] <= WD3;
     end
 
