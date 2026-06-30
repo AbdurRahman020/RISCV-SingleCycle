@@ -4,7 +4,7 @@ module instr_mem(
 
 );
 
-    logic [31:0] instr_mem [2^32-1:0]
+    logic [31:0] instr_mem [63:0]
 
     assign RD = instr_mem[A1];
     

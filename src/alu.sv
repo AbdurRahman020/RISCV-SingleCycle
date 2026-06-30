@@ -1,7 +1,7 @@
 module alu (
     input logic [31:0] SrcA,
     input logic [31:0] SrcB,
-    input logic [2:0] AluControl,
+    input logic [2:0] AlUControl,
 
     output logic Zero,
     output logic [31:0] ALUResult
