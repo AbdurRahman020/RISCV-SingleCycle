@@ -1,4 +1,4 @@
-module alu (
+module alu(
     input logic [31:0] SrcA,
     input logic [31:0] SrcB,
     input logic [2:0] AlUControl,
@@ -8,7 +8,7 @@ module alu (
 );
 
     always_comb begin
-        case (AluControl)
+        case (AlUControl)
             3'b000: ALUResult = SrcA & SrcB; // AND
             3'b001: ALUResult = SrcA | SrcB; // OR
             3'b010: ALUResult = SrcA + SrcB; // ADD
