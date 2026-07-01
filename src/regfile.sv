@@ -11,9 +11,9 @@ module regfile(
     always_ff @(posedge CLK) begin  // synchronus write
         if (WE3 && A3 != 5'b0)
             x[A3] <= WD3;
+        x[0] = 0;                   // x0 hardwired to 0
     end
-
-    assign x[0] = 0;                // x0 hardwired to 0
+   
     assign RD1 = x[A1];             // read port 1
     assign RD2 = x[A2];             // read port 2
 
